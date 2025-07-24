@@ -1,8 +1,8 @@
-FROM nginx:alpine
+FROM caddy:alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html
 
-COPY index.html .
-COPY static ./static
+COPY . .
 
 EXPOSE 80
+EXPOSE 443
