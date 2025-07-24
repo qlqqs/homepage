@@ -53,6 +53,15 @@
 
 ## 🛠️更新日志
 
+1.7更新(2024.12.24)
+- 移除 Caddy，改用 nginx:alpine 作为基础镜像
+- 简化 Docker 部署，适用于外部 nginx 反向代理场景
+- 运行命令保持不变：
+  ```bash
+  docker compose up -d
+  ```
+- 容器仅暴露 80 端口，SSL 证书由外部 nginx 处理
+
 1.6更新(2024.09.05)
 - 增加 `docker-compose` 一键部署。  
 - 自行安装 `docker` 和 `docker-compose`。  
